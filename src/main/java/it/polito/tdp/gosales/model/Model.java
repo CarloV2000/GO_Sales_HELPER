@@ -96,8 +96,8 @@ public class Model {
 		Set<Retailers> connessi = inspector.connectedSetOf(r);
 		
 		//calcola il peso totale degli archi nella componente connessa
-		// Possiamo prendere gli archi del grafo uno a uno, e verificare se i suoi 
-		// vertici sono nella componente connessa. In caso affermativo, possiamo aggiungere
+		// Posso prendere gli archi del grafo uno a uno, e verificare se i suoi 
+		// vertici sono nella componente connessa. In caso affermativo, posso aggiungere
 		//il suo peso al totale.
 		int peso = 0;
 		for(DefaultWeightedEdge e : this.grafo.edgeSet()) {
@@ -168,7 +168,7 @@ public class Model {
 	 * Usato nella ricorsione, per calcolare il salario del Dream Team
 	 * @param team
 	 * @return
-	 */
+	
 	private double getSalarioTeam(List<People> team) {
 		double result = 0.0;
 		for (People p : team) {
@@ -182,7 +182,6 @@ public class Model {
 	 * Metodo per calcolare il vertice di grado minimo tra un insieme di vertici
 	 * @param squadra
 	 * @return
-	 */
 	private People minDegreeVertex(List<People> squadra) {
 		People res = null;
 		int gradoMin = -1;
@@ -193,7 +192,7 @@ public class Model {
 			}
 		}		
 		return res;
-	}*/
+	} */
 	
 	
 	
@@ -319,7 +318,7 @@ public class Model {
 	 * @param c è il vertice di cui voglio sapere i confinanti
 	 * @return una list di vertici: adiacenti a quello inserito
 	 */
-	public List<Retailers> trovaConfinanti(Retailers c, int anno) {
+	public List<Retailers> trovaConfinanti(Retailers c) {
 		List<Retailers>confinanti = new ArrayList<Retailers>();
 		confinanti = Graphs.neighborListOf(grafo, c);		
 		return confinanti;
